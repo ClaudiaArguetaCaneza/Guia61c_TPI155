@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejemplo WEB API</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="estilo.css" type="text/css" media="screen">
+    <script src="codigo.js"></script>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        .custom-button {
+            background-color: #1072a6a1;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: 2px solid #1072a6a1;
+            border-radius: 5px;
+        }
+
+        #formagregar {
+            text-align: left;
+            background-color: #a8e0c1;
+            color: #333;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body background="fondo.jpeg" text="#000000" link="#33FFFF" vlink="#FF9900" alink="#33CC00">
+    <h4 align="left">
+        <font>
+            <i>
+                <b>UNIVERSIDAD DE EL SALVADOR</b><br>
+                Facultad de Ingenier&iacute;a y Arquitectura<br>
+                Escuela de Ingenier&iacute;a de Sistemas Inform&aacute;ticos<br>
+            </i>
+        </font>
+    </h4>
+    <h1>Ejemplo WEB API</h1>
+    <h4>Nombre: Claudia María Argueta Caneza | Carnet: AC17033 | Grupo de Trabajo: 03</h4>
+    <p>
+        <button class="custom-button" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button>
+    </p>
+    <div id="formagregar" style="display: none;">
+        <form class="formagregar">
+            <h4>Agregar Producto</h4>
+            <label class="marginTitulo">Titulo: </label><input type="text" id="AgregarTitulo" size="59">
+            <label>  Precio: </label><input type="text" id="AgregarPrecio">
+            <label>  Descripción: </label><input type="text" id="AgregarDescripcion" size="54">
+            <br><br>
+            <label class="marginImagen">URL de Imagen: </label><input type="text" id="AgregarUrl" size="48">
+            <label>Categoria: </label>
+            <select id="AgregarCategoria">
+                <option selected></option>
+                <option value="electronicos">electronicos</option>
+                <option value="joyeria">joyeria</option>
+                <option value="caballeros">caballeros</option>
+                <option value="damas">damas</option>
+                <i></i>
+            </select>
+        </form>
+        <br>
+        <button class="custom-button" onclick="agregarProductos()">Agregar Producto</button>
+    </div>
+    <br>
+    <div id="listado" style="display:none;">
+        <form name="filtroprods" id="filtroprods">
+            Seleccione Categorias
+            <input type="checkbox" id="c1" value="c1" checked>Electronicos
+            <input type="checkbox" id="c2" value="c2" checked>Joyería
+            <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+            <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+            <p>Click en la imagen para Acercamiento | Click en precio para ordenar Asc o Desc</p>
+            <table id="tabla" border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th id="price">Price</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Accion</th>
+                </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
