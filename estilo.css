@@ -12,7 +12,7 @@ input#c3:not(checked) ~ table tbody tr.c3 { display: none; }
 input#c4:checked ~ table tbody tr.c4 { display: table-row; }
 input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
 
-/* Resaltar filas al pasar el ratón por encima */
+/* Resaltar filas al pasar el ratón por encima a */
 tr:hover {
     background-color: #e3f282; /* Color de fondo al pasar el ratón por encima */
 }
